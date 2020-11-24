@@ -51,7 +51,7 @@ RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.8/main' >> /etc/apk/repositori
         php7-zip \
         shadow \
         supervisor \
-    && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
+    && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --version=1.10.17\
     && composer global require hirak/prestissimo \
     && groupadd cocorico && useradd -g cocorico --create-home cocorico \
     && mkdir -p /data/db \
